@@ -6,83 +6,189 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @StateObject var client = Client()
+    @AppStorage("key") var key = ""
+    
+    @State private var search = ""
 
     var body: some View {
+//        HStack {
+//            Text("Please enter the key: ")
+//
+//            TextField("key", text: $key) {
+//                UserDefaults.standard.set(key, forKey: "key")
+//            }
+//            .textFieldStyle(RoundedBorderTextFieldStyle())
+//            .disableAutocorrection(true)
+//            .textCase(.lowercase)
+//
+//        }
         NavigationView {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                switch client.loadingStatus {
+                case .loading:
+                    ForEach(0..<25) { item in
+                        ContactLoadCell()
                     }
+                case .success:
+                    ForEach(searchResults, id: \.email) { contact in
+                        NavigationLink(destination: DetailView(contact: contact)) {
+                            ContactCell(contact: contact)
+                        }
+                    }
+                case .error:
+                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact information-technology@hawaiilions.org")
                 }
-                .onDelete(perform: deleteItems)
             }
+            .navigationTitle("D50 Directory")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        alertTF(title: "Please enter the key", message: "Email information-technology@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
+                            UserDefaults.standard.set(text, forKey: "key")
+                        } secondaryAction: {}
+                    }) {
+                        Image(systemName: "gearshape")
+                        .padding(10)
                     }
                 }
             }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            .refreshable {
+                await client.fetchData()
             }
+            .searchable(text: $search)
         }
+        .environmentObject(client)
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+    var searchResults: [Contact] {
+        if client.contacts == nil {
+            return []
+        } else if search.isEmpty {
+            return client.contacts!
+        } else {
+            return client.contacts!.filter {
+                $0.email.lowercased().contains(search.lowercased()) ||
+                $0.phone.lowercased().contains(search.lowercased()) ||
+                $0.first.lowercased().contains(search.lowercased()) ||
+                $0.last.lowercased().contains(search.lowercased()) ||
+                $0.title.lowercased().contains(search.lowercased()) ||
+                $0.club.lowercased().contains(search.lowercased())
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+struct ContactCell: View {
+    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var client: Client
+    
+    var contact: Contact
+    
+    var body: some View {
+        HStack(spacing: 10) {
+            if contact.image != nil {
+                AsyncImage(url: URL(string: contact.image!)) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 60, height: 60)
+                .clipped()
+                .cornerRadius(150)
+                .shadow(radius: 3)
+            } else {
+                ZStack {
+                    Circle()
+                        .fill(Color.random())
+                        .frame(width: 60, height: 60)
+                    Text("\(String(contact.first.uppercased().prefix(1)))")
+                        .font(.system(.title))
+                        .foregroundColor(Color.white)
+                }
+            }
+            VStack(alignment: .leading) {
+                Text("\(contact.first) \(contact.last)")
+                    .font(.system(.headline))
+                Group {
+                    Text(contact.title)
+                        .font(.system(.caption))
+                    Text(contact.club)
+                        .font(.system(.caption))
+                }
+                .foregroundColor(colorScheme == .light ? Color.black.opacity(0.7) : Color.white.opacity(0.7))
+            }
+        }
+    }
+}
+
+struct ContactLoadCell: View {
+    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var client: Client
+    @State private var isAnimating = false
+    
+    var body: some View {
+        HStack(spacing: 10) {
+            Circle()
+                .frame(width: 60, height: 60)
+            VStack(alignment: .leading) {
+                Capsule()
+                    .frame(height: 10)
+                Capsule()
+                    .frame(width: UIScreen.main.bounds.width / 3, height: 10)
+            }
+        }
+        .opacity(isAnimating ? 0.5 : 1)
+        .foregroundColor(colorScheme == .light ? Color.black.opacity(0.3) : Color.white.opacity(0.3))
+        .onAppear {
+            withAnimation(Animation.easeInOut(duration: 0.8).repeatForever()) {
+                isAnimating = true
+            }
+        }
+        .onDisappear {
+            isAnimating = false
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+    }
+}
+
+extension View {
+    func alertTF(title: String, message: String, hintText: String, primaryTitle: String, secondaryTitle: String, primaryAction: @escaping (String)->(), secondaryAction: @escaping ()->() ) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let key = UserDefaults.standard.string(forKey: "key")
+        alert.addTextField { field in
+            field.placeholder = hintText
+            field.text = key
+        }
+        alert.addAction(.init(title: secondaryTitle, style: .cancel, handler: { _ in
+            secondaryAction()
+        }))
+        alert.addAction(.init(title: primaryTitle, style: .default, handler: { _ in
+            if let text = alert.textFields?[0].text {
+                primaryAction(text)
+            }
+            else {
+                primaryAction("")
+            }
+        }))
+        rootController().present(alert, animated: true, completion: nil)
+    }
+    
+    func rootController()->UIViewController {
+        guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return .init()
+        }
+        guard let root = screen.windows.first?.rootViewController else {
+            return .init()
+        }
+        return root
     }
 }

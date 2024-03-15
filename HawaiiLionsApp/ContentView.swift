@@ -14,17 +14,6 @@ struct ContentView: View {
     @State private var search = ""
 
     var body: some View {
-//        HStack {
-//            Text("Please enter the key: ")
-//
-//            TextField("key", text: $key) {
-//                UserDefaults.standard.set(key, forKey: "key")
-//            }
-//            .textFieldStyle(RoundedBorderTextFieldStyle())
-//            .disableAutocorrection(true)
-//            .textCase(.lowercase)
-//
-//        }
         NavigationView {
             List {
                 switch client.loadingStatus {
@@ -39,14 +28,14 @@ struct ContentView: View {
                         }
                     }
                 case .error:
-                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact information-technology@hawaiilions.org")
+                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact kobeyarai@hawaiilions.org")
                 }
             }
             .navigationTitle("D50 Directory")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        alertTF(title: "Please enter the key", message: "Email information-technology@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
+                        alertTF(title: "Please enter the key", message: "Email kobeyarai@hawaiil ions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
                             UserDefaults.standard.set(text, forKey: "key")
                         } secondaryAction: {}
                     }) {

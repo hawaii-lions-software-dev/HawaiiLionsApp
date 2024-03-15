@@ -3,7 +3,7 @@
     "message": "Successfully fetched contacts.",
     "body": [
         {
-          "first": "John",
+          "first": "Johnson",
           "last": "Test",
           "phone": "(905) 437-2764",
           "email": "belindaoconnor@vurbo.com",
@@ -15,7 +15,7 @@
           "last": "Rios",
           "phone": "(977) 533-2407",
           "email": "mckenzierios@vurbo.com",
-          "title": "District Governer",
+          "title": "Region 1 Zone 1 Chair",
           "image": "https://www.hawaiilions.org/img.jpg",
           "club": "Mililani Lions Club"
         },
@@ -24,7 +24,7 @@
           "last": "Dickerson",
           "phone": "(850) 524-3797",
           "email": "yangdickerson@vurbo.com",
-          "title": "District Governer",
+          "title": "Region 2 Zone 2",
           "image": "https://www.hawaiilions.org/img.jpg",
           "club": "Mililani Lions Club"
         },
@@ -33,7 +33,7 @@
           "last": "Alvarado",
           "phone": "(897) 500-3104",
           "email": "riggsalvarado@vurbo.com",
-          "title": "District Governer",
+          "title": "Cabinet Secretary",
           "club": "Mililani Lions Club"
         },
         {
@@ -41,7 +41,7 @@
           "last": "Turner",
           "phone": "(998) 536-2157",
           "email": "tuckerturner@vurbo.com",
-          "title": "District Governer",
+          "title": "Cabinet Treasurer",
           "club": "Mililani Lions Club"
         },
         {
@@ -58,7 +58,7 @@
           "last": "Phelps",
           "phone": "(964) 449-3398",
           "email": "peckphelps@vurbo.com",
-          "title": "District Treasurer",
+          "title": "Auditor",
           "club": "Mililani Lions Club"
         },
         {
@@ -156,7 +156,7 @@
           "last": "Hull",
           "phone": "(825) 518-3844",
           "email": "lynnhull@vurbo.com",
-          "title": "District Governer",
+          "title": "Koko Head Lions Club President",
           "image": "https://www.hawaiilions.org/img.jpg",
           "club": "Mililani Lions Club"
         },
@@ -201,15 +201,6 @@
           "last": "Trevino",
           "phone": "(829) 484-3015",
           "email": "jimmietrevino@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
-        },
-        {
-          "first": "Stacy",
-          "last": "Castillo",
-          "phone": "(804) 570-3101",
-          "email": "stacycastillo@vurbo.com",
           "title": "District Governer",
           "image": "https://www.hawaiilions.org/img.jpg",
           "club": "Mililani Lions Club"

@@ -156,6 +156,7 @@ struct DetailView: View {
             value: CNPhoneNumber(stringValue: phone))]
         contact.jobTitle = title
         contact.departmentName = club
+        contact.organizationName = "D50 Lions"
 
         // Save the newly created contact.
         let store = CNContactStore()

@@ -3,253 +3,760 @@
     "message": "Successfully fetched contacts.",
     "body": [
         {
-          "first": "Johnson",
-          "last": "Test",
-          "phone": "(905) 437-2764",
-          "email": "belindaoconnor@vurbo.com",
-          "title": "District Governer",
-          "club": "Mililani Lions Club"
+            "title": "Past International Director",
+            "first": "Maurice",
+            "last": "Kahawaii",
+            "email": "mmkahawaii@gmail.com",
+            "phone": "808-895-2081",
+            "club": "Kona",
+            "": ""
         },
         {
-          "first": "Mckenzie",
-          "last": "Rios",
-          "phone": "(977) 533-2407",
-          "email": "mckenzierios@vurbo.com",
-          "title": "Region 1 Zone 1 Chair",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Past International Director",
+            "first": "Robert ",
+            "last": "Lee",
+            "email": "pdgboblee@gmail.com",
+            "phone": "808-282-1258",
+            "club": "Chinatown",
+            "": ""
         },
         {
-          "first": "Yang",
-          "last": "Dickerson",
-          "phone": "(850) 524-3797",
-          "email": "yangdickerson@vurbo.com",
-          "title": "Region 2 Zone 2",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "District Governor",
+            "first": "Lori",
+            "last": "Inouye-Yamashita",
+            "email": "lionlori.i.y@gmail.com",
+            "phone": "808-728-0830",
+            "club": "Manoa",
+            "": ""
         },
         {
-          "first": "Riggs",
-          "last": "Alvarado",
-          "phone": "(897) 500-3104",
-          "email": "riggsalvarado@vurbo.com",
-          "title": "Cabinet Secretary",
-          "club": "Mililani Lions Club"
+            "title": "First Vice District Governor",
+            "first": "Sean",
+            "last": "Benito",
+            "email": "bruddahsean@gmail.com",
+            "phone": "808-333-8166",
+            "club": "Hilo Crescent City",
+            "": ""
         },
         {
-          "first": "Tucker",
-          "last": "Turner",
-          "phone": "(998) 536-2157",
-          "email": "tuckerturner@vurbo.com",
-          "title": "Cabinet Treasurer",
-          "club": "Mililani Lions Club"
+            "title": "Second Vice District Governor",
+            "first": "Cedric",
+            "last": "Mitsui",
+            "email": "doc_mitsui@yahoo.com ",
+            "phone": "808-392-3937",
+            "club": "Chinatown ",
+            "": ""
         },
         {
-          "first": "Randi",
-          "last": "Richards",
-          "phone": "(899) 545-3241",
-          "email": "randirichards@vurbo.com",
-          "title": "Executive Secretary",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Immediate Past District Governor",
+            "first": "CJ",
+            "last": "Kalopodes",
+            "email": "lioncjkalopodes@gmail.com",
+            "phone": "808-221-3857",
+            "club": "Kaneohe",
+            "": ""
         },
         {
-          "first": "Peck",
-          "last": "Phelps",
-          "phone": "(964) 449-3398",
-          "email": "peckphelps@vurbo.com",
-          "title": "Auditor",
-          "club": "Mililani Lions Club"
+            "title": "Honorary District Governor",
+            "first": "PDG Nadine",
+            "last": "Nishioka",
+            "email": "lionnadinenishioka@gmail.com",
+            "phone": "808-391-8145",
+            "club": "Manoa",
+            "": ""
         },
         {
-          "first": "Eugenia",
-          "last": "Randolph",
-          "phone": "(979) 600-3437",
-          "email": "eugeniarandolph@vurbo.com",
-          "title": "Region 2 Zone II Chairperson",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Cabinet Secretary",
+            "first": "PDG Gary",
+            "last": "Nip",
+            "email": "gary.nip808@gmail.com",
+            "phone": "808-382-9307",
+            "club": "Koko Head",
+            "": ""
         },
         {
-          "first": "Rebekah",
-          "last": "Hutchinson",
-          "phone": "(862) 583-3220",
-          "email": "rebekahhutchinson@vurbo.com",
-          "title": "IT Comittee Chairperson",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Cabinet Treasurer",
+            "first": "PDG Chris",
+            "last": "Tamura",
+            "email": "ctamura@hawaii.rr.com ",
+            "phone": "808-492-3708",
+            "club": "Pearl City",
+            "": ""
         },
         {
-          "first": "Ashley",
-          "last": "Reed",
-          "phone": "(972) 450-2099",
-          "email": "ashleyreed@vurbo.com",
-          "title": "Vision and Hearing",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Sergeant at Arms",
+            "first": "Bruce",
+            "last": "Kimura",
+            "email": "brucekk49@gmail.com",
+            "phone": "808-450-4913",
+            "club": "Manoa",
+            "": ""
         },
         {
-          "first": "Head",
-          "last": "Marquez",
-          "phone": "(868) 570-2279",
-          "email": "headmarquez@vurbo.com",
-          "title": "Diabetes",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region I Zone I Chair",
+            "first": "Crystal",
+            "last": "Caday",
+            "email": "crystalcaday@gmail.com",
+            "phone": "808-278-8733",
+            "club": "East Kauai Lions",
+            "": ""
         },
         {
-          "first": "Eaton",
-          "last": "Combs",
-          "phone": "(930) 527-3991",
-          "email": "eatoncombs@vurbo.com",
-          "title": "Childhood Cancer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region II Zone 1 Chair",
+            "first": "Puna",
+            "last": "Nouchi",
+            "email": "pnouchi308@gmail.com",
+            "phone": "808-349-9485",
+            "club": "Kapolei City",
+            "": ""
         },
         {
-          "first": "Baker",
-          "last": "Doyle",
-          "phone": "(949) 420-3264",
-          "email": "bakerdoyle@vurbo.com",
-          "title": "Environment Committee",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region II Zone 2 Chair",
+            "first": "Kobey",
+            "last": "Arai",
+            "email": "kobeyarai@gmail.com ",
+            "phone": "808-542-7606",
+            "club": "Mililani",
+            "": ""
         },
         {
-          "first": "Workman",
-          "last": "Hardin",
-          "phone": "(986) 528-2787",
-          "email": "workmanhardin@vurbo.com",
-          "title": "Public Relations",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region III Zone 1 Chair",
+            "first": "Kalae",
+            "last": "Kukahiko",
+            "email": "lionkalaek@gmail.com",
+            "phone": "808-256-6850",
+            "club": "Kahaluu",
+            "": ""
         },
         {
-          "first": "Annmarie",
-          "last": "Huff",
-          "phone": "(847) 439-3162",
-          "email": "annmariehuff@vurbo.com",
-          "title": "Advisor",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region III Zone 2 Chair",
+            "first": "Lyn",
+            "last": "Liu",
+            "email": "lynl@hawaii.rr.com",
+            "phone": "808-277-8437",
+            "club": "Kapahulu-Moiliili",
+            "": ""
         },
         {
-          "first": "Mara",
-          "last": "Farrell",
-          "phone": "(970) 467-2422",
-          "email": "marafarrell@vurbo.com",
-          "title": "Mililani Lions Club President",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region IV Zone 1 Chair",
+            "first": "Kyle",
+            "last": "Laconsay",
+            "email": "hearkylaugh@gmail.com",
+            "phone": "808-457-7757",
+            "club": "Lions Club of Honolulu",
+            "": ""
         },
         {
-          "first": "Alfreda",
-          "last": "Benton",
-          "phone": "(996) 494-3672",
-          "email": "alfredabenton@vurbo.com",
-          "title": "Wahiawa Lions Club President",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region IV Zone 2 Chair",
+            "first": "Heather",
+            "last": "Valdez",
+            "email": "heatheretteamor@gmail.com",
+            "phone": "808--223-9225",
+            "club": "Leeward Oahu",
+            "": ""
         },
         {
-          "first": "Lynn",
-          "last": "Hull",
-          "phone": "(825) 518-3844",
-          "email": "lynnhull@vurbo.com",
-          "title": "Koko Head Lions Club President",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region V Zone 1 Chair",
+            "first": "Jaci",
+            "last": "Yokogawa",
+            "email": "jaciyokogawa@gmail.com",
+            "phone": "808-388-2450",
+            "club": "Koko Head",
+            "": ""
         },
         {
-          "first": "Alisha",
-          "last": "Estes",
-          "phone": "(947) 439-3802",
-          "email": "alishaestes@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region VI Zone 1 Chair",
+            "first": "Paul",
+            "last": "Seto",
+            "email": "setopaul1991@yahoo.com",
+            "phone": "917-940-6122",
+            "club": "Kahului",
+            "": ""
         },
         {
-          "first": "Ronda",
-          "last": "Stein",
-          "phone": "(969) 587-2937",
-          "email": "rondastein@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region VII Zone 1 Chair",
+            "first": "Diane",
+            "last": "Kent",
+            "email": "dktk808@yahoo.com",
+            "phone": "808-896-1523",
+            "club": "Akaka Falls",
+            "": ""
         },
         {
-          "first": "Marianne",
-          "last": "Wheeler",
-          "phone": "(952) 441-2217",
-          "email": "mariannewheeler@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region VIII Zone 1 Chair",
+            "first": "Lee",
+            "last": "Morris",
+            "email": "leemorrisrn@hotmail.com ",
+            "phone": "408-348-6866",
+            "club": "Waimea",
+            "": ""
         },
         {
-          "first": "Deanne",
-          "last": "Meadows",
-          "phone": "(937) 578-2716",
-          "email": "deannemeadows@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region VIII Zone 2 Chair",
+            "first": "Norma",
+            "last": "Matsumoto",
+            "email": "Norma@hawaii.rr.com ",
+            "phone": "808-989-3015",
+            "club": "Kona",
+            "": ""
         },
         {
-          "first": "Jimmie",
-          "last": "Trevino",
-          "phone": "(829) 484-3015",
-          "email": "jimmietrevino@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Region IX Zone 1 Chair",
+            "first": "Bixby",
+            "last": "Ho",
+            "email": "bixby.ho@gmail.com",
+            "phone": "808-561-2186",
+            "club": "Cyber",
+            "": ""
         },
         {
-          "first": "Coleman",
-          "last": "Carlson",
-          "phone": "(803) 464-2298",
-          "email": "colemancarlson@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Auditor",
+            "first": "Gary",
+            "last": "Hiramatsu",
+            "email": "gkhiram4@gmail.com",
+            "phone": "808-225-6070",
+            "club": "Pali",
+            "": ""
         },
         {
-          "first": "Vilma",
-          "last": "Kim",
-          "phone": "(866) 555-2462",
-          "email": "vilmakim@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Executive Secretary",
+            "first": "PDG Cecelia",
+            "last": "Izuo",
+            "email": "info.hawaiilions@gmail.com",
+            "phone": "808-755-9998",
+            "club": "Pali",
+            "": ""
         },
         {
-          "first": "Walton",
-          "last": "Howe",
-          "phone": "(855) 560-3992",
-          "email": "waltonhowe@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Executive Assistant",
+            "first": "Leona",
+            "last": "Kobashigawa",
+            "email": "lkobash22@yahoo.com",
+            "phone": "808-938-3468",
+            "club": "Manoa",
+            "": ""
         },
         {
-          "first": "Juliet",
-          "last": "Young",
-          "phone": "(942) 522-2879",
-          "email": "julietyoung@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Legal Advisor",
+            "first": "Carolyn",
+            "last": "Hayashi",
+            "email": "cehayashi@lawcsilc.com ",
+            "phone": "808-778-0087",
+            "club": "Wahiawa",
+            "": ""
         },
         {
-          "first": "Jennings",
-          "last": "Salas",
-          "phone": "(933) 485-3238",
-          "email": "jenningssalas@vurbo.com",
-          "title": "District Governer",
-          "image": "https://www.hawaiilions.org/img.jpg",
-          "club": "Mililani Lions Club"
+            "title": "Parlimentarian",
+            "first": "Rene",
+            "last": "Mansho",
+            "email": "renemansho@hawaii.rr.com",
+            "phone": "808-291-6151",
+            "club": "Wahiawa",
+            "": ""
+        },
+        {
+            "title": "Photographer",
+            "first": "Thomas",
+            "last": "Palmer",
+            "email": "tpalmer808@gmail.com",
+            "phone": "808-218-2305",
+            "club": "Koko Head",
+            "": ""
+        },
+        {
+            "title": "Photographer",
+            "first": "Pamela",
+            "last": "Young",
+            "email": "mililanilionpam@gmail.com",
+            "phone": "808-203-3852",
+            "club": "Mililani",
+            "": ""
+        },
+        {
+            "title": "Photographer",
+            "first": "Justin",
+            "last": "Nip",
+            "email": "justinkendra@hotmail.com",
+            "phone": "808-330-6870",
+            "club": "Koko Head",
+            "": ""
+        },
+        {
+            "title": "President",
+            "first": "Linda",
+            "last": "Ross Myer",
+            "email": "lionlindarossmyers@gmail.com ",
+            "phone": "808-333-6859",
+            "club": "Kona",
+            "": ""
+        },
+        {
+            "title": "Global Leadership Team (GLT) Coordinator",
+            "first": "PDG Mark ",
+            "last": "Mizuno",
+            "email": "mmizuno4@twc.com ",
+            "phone": "808-268-9068",
+            "club": "Haleakala",
+            "": ""
+        },
+        {
+            "title": "Global Membership Team (GMT) Coordinator",
+            "first": "PDG Cecelia",
+            "last": "Izuo",
+            "email": "cilizuo@gmail.com",
+            "phone": "808-382-2569",
+            "club": "Pali",
+            "": ""
+        },
+        {
+            "title": "Global Extension Team (GET) Coordinator",
+            "first": "PDG Garrett",
+            "last": "Ogawa",
+            "email": "Liongarrettogawa@gmail.com",
+            "phone": "808-271-1431",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Global Service Team (GST) Coordinator",
+            "first": "PDG Eric",
+            "last": "Nordemeier",
+            "email": "pdgericd50@gmail.com",
+            "phone": "808-651-9166",
+            "club": "West Kauai Lions",
+            "": ""
+        },
+        {
+            "title": "Awards & Recognition",
+            "first": "Carmie",
+            "last": "Namacot",
+            "email": "Carmiejnamocot@gmail.com",
+            "phone": "808-722-2858",
+            "club": "Kapolei City",
+            "": ""
+        },
+        {
+            "title": "Board of Governors",
+            "first": "PDG Mitch",
+            "last": "Tam",
+            "email": "lionmitch@gmail.com",
+            "phone": "808-756-3838",
+            "club": "Kona",
+            "": ""
+        },
+        {
+            "title": "Constitution/By-Laws & Policy",
+            "first": "Gail ",
+            "last": "Kono",
+            "email": "gkono002@gmail.com",
+            "phone": "808-220-7732",
+            "club": "Leeward Oahu",
+            "": ""
+        },
+        {
+            "title": "District Convention ",
+            "first": "Jackie",
+            "last": "Cabebe",
+            "email": "lionjackiec@gmail.com",
+            "phone": "808-271-2120",
+            "club": "Waikiki 2000",
+            "": ""
+        },
+        {
+            "title": "Environmental Services",
+            "first": "Rene",
+            "last": "Mansho",
+            "email": "renemansho@hawaii.rr.com",
+            "phone": "808-291-6151",
+            "club": "Wahiawa",
+            "": ""
+        },
+        {
+            "title": "Finance ",
+            "first": "Dan",
+            "last": "Motohiro",
+            "email": "motohiro001@hawaii.rr.com",
+            "phone": "808-223-4893",
+            "club": "Pali",
+            "": ""
+        },
+        {
+            "title": "Hawaii International Youth Camp",
+            "first": "Miu Lan",
+            "last": "Oman",
+            "email": "miulano@yahoo.com",
+            "phone": "808-781-0287",
+            "club": "Aloha Pono",
+            "": ""
+        },
+        {
+            "title": "Informational Technology",
+            "first": "Guy",
+            "last": "Inouye",
+            "email": "connecthawaii@gmail.com",
+            "phone": "808-497-5994",
+            "club": "Pearl City",
+            "": ""
+        },
+        {
+            "title": "International Convention",
+            "first": "Arlene",
+            "last": "Shimokawa",
+            "email": "atshimokawa@outlook.com",
+            "phone": "808-551-8745",
+            "club": "Moanalua",
+            "": ""
+        },
+        {
+            "title": "Leo Club Advisor",
+            "first": "Aren",
+            "last": "Pai",
+            "email": "arenpai@hawaiilions.org",
+            "phone": "808-349-1058",
+            "club": "Mililani L4L Branch",
+            "": ""
+        },
+        {
+            "title": "Lions Clubs International Foundation (LCIF)",
+            "first": "Gary",
+            "last": "Nip",
+            "email": "Gary.nip808@gmail.com",
+            "phone": "808-382-9307",
+            "club": "Koko Head",
+            "": ""
+        },
+        {
+            "title": "Lions Hearing Program",
+            "first": "Shannon",
+            "last": "Ching",
+            "email": "chings008@hawaii.rr.com",
+            "phone": "808-291-0040",
+            "club": "Waikiki 2000",
+            "": ""
+        },
+        {
+            "title": "Lions Vision Screening (Oahu & Neighbor island/Amblyopia)",
+            "first": "Roberta",
+            "last": "Jenkins",
+            "email": "lionberta.jenkins@gmail.com",
+            "phone": "808-220-4977",
+            "club": "Mililani",
+            "": ""
+        },
+        {
+            "title": "Sub-chair Vision Screening",
+            "first": "Dr. Roger",
+            "last": "Ede",
+            "email": "visionhawaii@gmail.com",
+            "phone": "808-721-1661",
+            "club": "Hawaii Kai",
+            "": ""
+        },
+        {
+            "title": "Sub-chair Vision Screening",
+            "first": "Gavin",
+            "last": "Hall",
+            "email": "liongavinhall@gmail.com",
+            "phone": "808-222-8000",
+            "club": "Koko Head",
+            "": ""
+        },
+        {
+            "title": "Lions in Sight Eyeglass Recycling Chair",
+            "first": "Jennifer",
+            "last": "Shintani",
+            "email": "jennifer@alan-shintani.com",
+            "phone": "808-628-1750",
+            "club": "Moanalua",
+            "": ""
+        },
+        {
+            "title": "Long Range Planning",
+            "first": "Nadine",
+            "last": "Nishioka",
+            "email": "Lionnadinenishioka@gmail.com",
+            "phone": "808-391-8145",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Nominations Chair",
+            "first": "PDG Roy",
+            "last": "Nishida",
+            "email": "rlnishida@hawaiiantel.net",
+            "phone": "808-822-1436",
+            "club": "East Kauai ",
+            "": ""
+        },
+        {
+            "title": "Protocol",
+            "first": "PDG Blayne",
+            "last": "Hanagami",
+            "email": "bhanagami@yahoo.com ",
+            "phone": "808-443-6397",
+            "club": "Akaka Falls",
+            "": ""
+        },
+        {
+            "title": "Publication/Leo Liona",
+            "first": "Renee",
+            "last": "Ako",
+            "email": "leoliona@hawaiilions.org",
+            "phone": "808-382-5708",
+            "club": "Koko Head",
+            "": ""
+        },
+        {
+            "title": "Public Relations",
+            "first": "Irwin",
+            "last": "Santos",
+            "email": "irwinsantos@hawaiilions.org",
+            "phone": "808-230-6107",
+            "club": "Kamehameha",
+            "": ""
+        },
+        {
+            "title": "Resolutions",
+            "first": "Susan",
+            "last": "Moniz",
+            "email": "monizs001@hawaii.rr.com",
+            "phone": "808-671-0314",
+            "club": "Leeward Oahu",
+            "": ""
+        },
+        {
+            "title": "",
+            "first": "",
+            "last": "",
+            "email": "",
+            "phone": "",
+            "club": "",
+            "": ""
+        },
+        {
+            "title": "Aloha/Greetings",
+            "first": "Barbara",
+            "last": "Kalopodes",
+            "email": "Princesspupule2@gmail.com ",
+            "phone": "808-497-2383",
+            "club": "Kaneohe",
+            "": ""
+        },
+        {
+            "title": "Childhood/Pediatric Cancer",
+            "first": "Virginia",
+            "last": "McMahon",
+            "email": "mcmahonv001@hawaii.rr.com",
+            "phone": "808-220-9157",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Citizenship/Naturalization",
+            "first": "Miu Lan",
+            "last": "Oman",
+            "email": "miulano@yahoo.com",
+            "phone": "808-781-0287",
+            "club": "Aloha Pono",
+            "": ""
+        },
+        {
+            "title": "Cultural & Community Affiars",
+            "first": "Melvin",
+            "last": "Tom",
+            "email": "tomm009@hawaii.rr.com",
+            "phone": "808-265-2449",
+            "club": "Kamehameha",
+            "": ""
+        },
+        {
+            "title": "Diabetes Awareness",
+            "first": "Chris",
+            "last": "Chow",
+            "email": "chris.chow123@gmail.com",
+            "phone": "808-286-8390",
+            "club": "Waikiki 2000",
+            "": ""
+        },
+        {
+            "title": "Emergency Awareness",
+            "first": "PDG Garrett",
+            "last": "Ogawa",
+            "email": "liongarrettogawa@gmail.com",
+            "phone": "808-271-2431",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Emergency Awareness sub-chair",
+            "first": "PDG Mitch",
+            "last": "Tam",
+            "email": "Lionmitch@gmail.com",
+            "phone": "808-756-3838",
+            "club": "Kona",
+            "": ""
+        },
+        {
+            "title": "Great Aloha Run Co-chair",
+            "first": "Kathy",
+            "last": "Higa ",
+            "email": "kathyhiga@yahoo.com",
+            "phone": "808-225-8046",
+            "club": "Moanalua",
+            "": ""
+        },
+        {
+            "title": "Great Aloha Run Co-chair",
+            "first": "Guy",
+            "last": "Hashimoto ",
+            "email": "lionguymlc@yahoo.com",
+            "phone": "808-222-6839",
+            "club": "Moanalua",
+            "": ""
+        },
+        {
+            "title": "Health & Wellness",
+            "first": "Dr James",
+            "last": "Yamashita",
+            "email": "jlrjjyamashita@msn.com",
+            "phone": "808-728-0802",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Humanitarian ",
+            "first": "Gail ",
+            "last": "Dochin",
+            "email": "gndochin@gmail.com",
+            "phone": "808-987-8750",
+            "club": "Waimea",
+            "": ""
+        },
+        {
+            "title": "Hunger Awareness",
+            "first": "Ellsworth",
+            "last": "Fujii",
+            "email": "etf808@hawaiiantel.net",
+            "phone": "808-347-0933",
+            "club": "Hawaiii Kai",
+            "": ""
+        },
+        {
+            "title": "International Peace poster",
+            "first": "Susan",
+            "last": "Moniz",
+            "email": "monizs001@hawaii.rr.com",
+            "phone": "808-671-0314",
+            "club": "Leeward Oahu",
+            "": ""
+        },
+        {
+            "title": "Knights of the Blind Co-chair",
+            "first": "PDG Nadine ",
+            "last": "Nishioka ",
+            "email": "lionnadinenishioka@gmail.com",
+            "phone": "808-391-8145",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Knights of the Blind Co-chair",
+            "first": "Kyle ",
+            "last": "Laconsay ",
+            "email": "hearkylaugh@gmail.com",
+            "phone": "808-457-7757",
+            "club": "Honolulu",
+            "": ""
+        },
+        {
+            "title": "Leo to Lion/Advisor",
+            "first": "Aren",
+            "last": "Pai",
+            "email": "arenyushan@me.com",
+            "phone": "808-349-1058",
+            "club": "Mililani L4L Branch",
+            "": ""
+        },
+        {
+            "title": "Lions Day in the Park",
+            "first": "Arlene",
+            "last": "Shimokawa",
+            "email": "atshimokawa@outlook.com",
+            "phone": "808-551-8745",
+            "club": "Moanalua",
+            "": ""
+        },
+        {
+            "title": "Lions with heart",
+            "first": "PDG Garrett",
+            "last": "Ogawa",
+            "email": "liongarrettogawa@gmail.com",
+            "phone": "808-271-2431",
+            "club": "Manoa",
+            "": ""
+        },
+        {
+            "title": "Lions Quest",
+            "first": "Gal",
+            "last": "Kono",
+            "email": "gkono002@gmail.com",
+            "phone": "808-220-7732",
+            "club": "Leeward Oahu",
+            "": ""
+        },
+        {
+            "title": "New Voices",
+            "first": "Pamela",
+            "last": "Lee",
+            "email": "pamela232323@gmail.com",
+            "phone": "808-782-7040",
+            "club": "Chinatown",
+            "": ""
+        },
+        {
+            "title": "Safe Sidewalks",
+            "first": "Jerry",
+            "last": "Nagatani",
+            "email": "jjnagas@hawaii.rr.com",
+            "phone": "808-371-5188",
+            "club": "Pearl City",
+            "": ""
+        },
+        {
+            "title": "Sight is Beautiful",
+            "first": "Linda",
+            "last": "Tsuruma",
+            "email": "ladforme@hawaiiantel.net ",
+            "phone": "808-781-6070",
+            "club": "Pearl City",
+            "": ""
+        },
+        {
+            "title": "KMC Winter Forum Co-Chair",
+            "first": "Diane ",
+            "last": "Kent",
+            "email": "dktk808@yahoo.com",
+            "phone": "808-896-1523",
+            "club": "Akaka Falls",
+            "": ""
+        },
+        {
+            "title": "KMC Winter Forum Co-Chair",
+            "first": "Gail ",
+            "last": "Dochin",
+            "email": "gndochin@gmail.com",
+            "phone": "808-987-8750",
+            "club": "Waimea",
+            "": ""
+        },
+        {
+            "title": "Young Professional Lions ",
+            "first": "Shasta",
+            "last": "Yamada",
+            "email": "shasta.emi.yamada@gmail.com",
+            "phone": "808-397-9089",
+            "club": "Kokohead",
+            "": ""
         }
-      ]
+    ]
 }
-

@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import Contacts
 
 struct DetailView: View {
 
     let contact: Contact
+    
+    enum AlertType: Identifiable {
+            case first, second
+            
+            var id: Int {
+                hashValue
+            }
+        }
+    
+    @State var alertType: AlertType?
     
     var body: some View {
         VStack {
@@ -59,6 +70,7 @@ struct DetailView: View {
                     Text(contact.phone)
                         .foregroundColor(.gray)
                         .font(.callout)
+                        .textSelection(.enabled)
                 }
                 HStack {
                     Text("Email")
@@ -66,6 +78,7 @@ struct DetailView: View {
                     Text(contact.email)
                         .foregroundColor(.gray)
                         .font(.callout)
+                        .textSelection(.enabled)
                 }
 //                HStack {
 //                    Text("Address")
@@ -86,28 +99,77 @@ struct DetailView: View {
                         .foregroundColor(.blue)
                     }
                     Button(action: {
-                        callNumber(phoneNumber: contact.phone)
+                        phoneNumAction(phoneNumber: contact.phone, action: "tel://")
                     }) {
                         Text("Call "+contact.first)
                         .foregroundColor(.blue)
+                    }
+                    Button(action: {
+                        phoneNumAction(phoneNumber: contact.phone, action: "sms://")
+                    }) {
+                        Text("Send a Message to "+contact.first)
+                        .foregroundColor(.blue)
+                    }
+                    Button(action: {
+                        saveContact(first: contact.first, last: contact.last, email: contact.email, phone: contact.phone, title: contact.title, club: contact.club)
+                    }) {
+                        Text("Add Contact for "+contact.first)
+                        .foregroundColor(.blue)
+                    }
+                    .alert(item: $alertType) { type in
+                        switch type {
+                        case .first:
+                            return Alert(title: Text("Successfully Added Contact"))
+                        case .second:
+                            return Alert(title: Text("Failure to add Contact"))
+                        }
                     }
                 }
             }
         }
     }
     
-    private func callNumber(phoneNumber:String) {
+    private func phoneNumAction(phoneNumber:String, action:String) {
         let formattedPhoneNumber = phoneNumber
             .replacingOccurrences(of: "(", with: "")
             .replacingOccurrences(of: ")", with: "")
             .replacingOccurrences(of: " ", with: "")
             .replacingOccurrences(of: "-", with: "")
-      if let phoneCallURL = URL(string: "tel://\(formattedPhoneNumber)") {
+      if let phoneNumberURL = URL(string: "\(action)://\(formattedPhoneNumber)") {
         let application:UIApplication = UIApplication.shared
-        if (application.canOpenURL(phoneCallURL)) {
-            application.open(phoneCallURL, options: [:], completionHandler: nil)
+        if (application.canOpenURL(phoneNumberURL)) {
+            application.open(phoneNumberURL, options: [:], completionHandler: nil)
         }
       }
+    }
+
+    
+    private func saveContact(first: String, last: String, email: String, phone: String, title: String, club: String) {
+        // Create a mutable object to add to the contact.
+        let contact = CNMutableContact()
+        contact.givenName = first
+        contact.familyName = last
+        let workEmail = CNLabeledValue(label: CNLabelWork, value: email as NSString)
+        contact.emailAddresses = [workEmail]
+        contact.phoneNumbers = [CNLabeledValue(
+            label: CNLabelPhoneNumberiPhone,
+            value: CNPhoneNumber(stringValue: phone))]
+        contact.jobTitle = title
+        contact.departmentName = club
+
+        // Save the newly created contact.
+        let store = CNContactStore()
+        let saveRequest = CNSaveRequest()
+        saveRequest.add(contact, toContainerWithIdentifier: nil)
+
+        do {
+            try store.execute(saveRequest)
+            alertType = .first
+        } catch {
+            print("Saving contact failed, error: \(error)")
+            alertType = .second
+            // Handle the error.
+        }
     }
     
 }

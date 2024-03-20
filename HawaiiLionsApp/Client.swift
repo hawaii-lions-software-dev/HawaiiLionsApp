@@ -45,9 +45,9 @@ class Client: ObservableObject {
         let request = URLRequest(url: URL(string: "https://httpbin.org/delay/2")!)
         let _ = try! await URLSession.shared.data(for: request)
         // get the data from the file
-        guard let url = Bundle.main.url(forResource: "data.json", withExtension: nil) else { /* Used to fetch data from local file */
-        //let fileName = UserDefaults.standard.string(forKey: "key") ?? "notFound"
-        //guard let url = URL(string: "https://www.hawaiilions.org/"+fileName.lowercased()+".json") else {  /* Used to fetch data from website */
+//        guard let url = Bundle.main.url(forResource: "data.json", withExtension: nil) else { /* Used to fetch data from local file */
+        let fileName = UserDefaults.standard.string(forKey: "key") ?? "notFound"
+        guard let url = URL(string: "https://www.hawaiilions.org/"+fileName.lowercased()+".json") else {  /* Used to fetch data from website */
             DispatchQueue.main.async {
                 self.loadingStatus = .error
             }

@@ -35,7 +35,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        alertTF(title: "Please enter the key", message: "Email kobeyarai@hawaiil ions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
+                        alertTF(title: "Please enter the key", message: "Email kobeyarai@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
                             UserDefaults.standard.set(text, forKey: "key")
                         } secondaryAction: {}
                     }) {

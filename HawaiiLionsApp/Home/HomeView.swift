@@ -1,5 +1,5 @@
 //
-//  HomeView2.swift
+//  HomeView.swift
 //  HawaiiLionsApp
 //
 //  Created by Kobey Arai on 3/31/24.
@@ -12,7 +12,7 @@ class SelectedObject: ObservableObject {
     @Published var name = ""
 }
 
-struct HomeView2: View {
+struct HomeView: View {
     @Namespace var animation
     @StateObject var selectedObject = SelectedObject()
     var body: some View {

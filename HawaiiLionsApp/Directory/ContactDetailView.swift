@@ -177,6 +177,6 @@ struct DetailView: View {
 
 //struct DetailView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DetailView(contact: contacts[0])
+//        DetailView(contact: contactPreview)
 //    }
 //}

@@ -15,6 +15,22 @@ struct HawaiiLionsAppApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    if #available(iOS 15.0, *) {
+                        let appearance = UITabBarAppearance()
+                        UITabBar.appearance().scrollEdgeAppearance = appearance
+                    }
+                }
         }
     }
+}
+
+class FSAppDelegate: NSObject, UIApplicationDelegate {
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    // ...
+    return true
+  }
 }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003845BC2BB9F98C00009094 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003845BB2BB9F98C00009094 /* ContactListView.swift */; };
+		003845D22BBA066600009094 /* ContactLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003845D12BBA066600009094 /* ContactLoadCell.swift */; };
+		003845D42BBA06E900009094 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003845D32BBA06E900009094 /* ContactCell.swift */; };
+		0038462C2BBA50C700009094 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038462B2BBA50C700009094 /* HomeView.swift */; };
+		0038462E2BBA515200009094 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038462D2BBA515200009094 /* TodayView.swift */; };
+		003846302BBA546200009094 /* TodayDetaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038462F2BBA546200009094 /* TodayDetaiView.swift */; };
+		003846322BBA55BA00009094 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003846312BBA55BA00009094 /* CardView.swift */; };
 		00924FD42871ABBC00104832 /* HawaiiLionsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */; };
 		00924FD62871ABBC00104832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FD52871ABBC00104832 /* ContentView.swift */; };
 		00924FD82871ABBD00104832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00924FD72871ABBD00104832 /* Assets.xcassets */; };
@@ -15,10 +22,17 @@
 		00924FE02871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00924FDE2871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld */; };
 		00924FE92871ABE000104832 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FE62871ABE000104832 /* Client.swift */; };
 		00924FEA2871ABE000104832 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 00924FE72871ABE000104832 /* data.json */; };
-		00924FEF2872666C00104832 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FEE2872666C00104832 /* DetailView.swift */; };
+		00924FEF2872666C00104832 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FEE2872666C00104832 /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003845BB2BB9F98C00009094 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
+		003845D12BBA066600009094 /* ContactLoadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLoadCell.swift; sourceTree = "<group>"; };
+		003845D32BBA06E900009094 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		0038462B2BBA50C700009094 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0038462D2BBA515200009094 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		0038462F2BBA546200009094 /* TodayDetaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetaiView.swift; sourceTree = "<group>"; };
+		003846312BBA55BA00009094 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		00924FD02871ABBC00104832 /* D50 Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D50 Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawaiiLionsAppApp.swift; sourceTree = "<group>"; };
 		00924FD52871ABBC00104832 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,7 +42,7 @@
 		00924FDF2871ABBD00104832 /* HawaiiLionsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HawaiiLionsApp.xcdatamodel; sourceTree = "<group>"; };
 		00924FE62871ABE000104832 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		00924FE72871ABE000104832 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		00924FEE2872666C00104832 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		00924FEE2872666C00104832 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003845BD2BB9FD0600009094 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				00924FE62871ABE000104832 /* Client.swift */,
+				00924FEE2872666C00104832 /* ContactDetailView.swift */,
+				003845BB2BB9F98C00009094 /* ContactListView.swift */,
+				00924FE72871ABE000104832 /* data.json */,
+				003845D12BBA066600009094 /* ContactLoadCell.swift */,
+				003845D32BBA06E900009094 /* ContactCell.swift */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		0038462A2BBA50B200009094 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0038462B2BBA50C700009094 /* HomeView.swift */,
+				0038462D2BBA515200009094 /* TodayView.swift */,
+				0038462F2BBA546200009094 /* TodayDetaiView.swift */,
+				003846312BBA55BA00009094 /* CardView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		00924FC72871ABBC00104832 = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +99,10 @@
 		00924FD22871ABBC00104832 /* HawaiiLionsApp */ = {
 			isa = PBXGroup;
 			children = (
-				00924FE72871ABE000104832 /* data.json */,
+				0038462A2BBA50B200009094 /* Home */,
+				003845BD2BB9FD0600009094 /* Directory */,
 				00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */,
 				00924FD52871ABBC00104832 /* ContentView.swift */,
-				00924FEE2872666C00104832 /* DetailView.swift */,
-				00924FE62871ABE000104832 /* Client.swift */,
 				00924FDC2871ABBD00104832 /* Persistence.swift */,
 				00924FD72871ABBD00104832 /* Assets.xcassets */,
 				00924FDE2871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld */,
@@ -153,12 +190,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003846302BBA546200009094 /* TodayDetaiView.swift in Sources */,
+				0038462C2BBA50C700009094 /* HomeView.swift in Sources */,
 				00924FE02871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld in Sources */,
-				00924FEF2872666C00104832 /* DetailView.swift in Sources */,
+				003845BC2BB9F98C00009094 /* ContactListView.swift in Sources */,
+				003846322BBA55BA00009094 /* CardView.swift in Sources */,
+				00924FEF2872666C00104832 /* ContactDetailView.swift in Sources */,
+				003845D42BBA06E900009094 /* ContactCell.swift in Sources */,
+				0038462E2BBA515200009094 /* TodayView.swift in Sources */,
 				00924FDD2871ABBD00104832 /* Persistence.swift in Sources */,
 				00924FD62871ABBC00104832 /* ContentView.swift in Sources */,
 				00924FE92871ABE000104832 /* Client.swift in Sources */,
 				00924FD42871ABBC00104832 /* HawaiiLionsAppApp.swift in Sources */,
+				003845D22BBA066600009094 /* ContactLoadCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,13 +336,12 @@
 				DEVELOPMENT_TEAM = K9HX2W8ZMR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hawaii Lions";
 				INFOPLIST_KEY_NSContactsUsageDescription = "We are asking for access to your contacts so we can add user contacts to the Contacts app. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,13 +367,12 @@
 				DEVELOPMENT_TEAM = K9HX2W8ZMR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hawaii Lions";
 				INFOPLIST_KEY_NSContactsUsageDescription = "We are asking for access to your contacts so we can add user contacts to the Contacts app. ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

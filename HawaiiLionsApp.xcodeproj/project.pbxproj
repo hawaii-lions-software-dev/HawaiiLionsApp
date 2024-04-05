@@ -14,7 +14,7 @@
 		0038462E2BBA515200009094 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038462D2BBA515200009094 /* TodayView.swift */; };
 		003846302BBA546200009094 /* TodayDetaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038462F2BBA546200009094 /* TodayDetaiView.swift */; };
 		003846322BBA55BA00009094 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003846312BBA55BA00009094 /* CardView.swift */; };
-		00924FD42871ABBC00104832 /* HawaiiLionsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */; };
+		00924FD42871ABBC00104832 /* HawaiiLionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FD32871ABBC00104832 /* HawaiiLionsApp.swift */; };
 		00924FD62871ABBC00104832 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FD52871ABBC00104832 /* ContentView.swift */; };
 		00924FD82871ABBD00104832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00924FD72871ABBD00104832 /* Assets.xcassets */; };
 		00924FDB2871ABBD00104832 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00924FDA2871ABBD00104832 /* Preview Assets.xcassets */; };
@@ -34,7 +34,7 @@
 		0038462F2BBA546200009094 /* TodayDetaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetaiView.swift; sourceTree = "<group>"; };
 		003846312BBA55BA00009094 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		00924FD02871ABBC00104832 /* D50 Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D50 Directory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawaiiLionsAppApp.swift; sourceTree = "<group>"; };
+		00924FD32871ABBC00104832 /* HawaiiLionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawaiiLionsApp.swift; sourceTree = "<group>"; };
 		00924FD52871ABBC00104832 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		00924FD72871ABBD00104832 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00924FDA2871ABBD00104832 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				0038462A2BBA50B200009094 /* Home */,
 				003845BD2BB9FD0600009094 /* Directory */,
-				00924FD32871ABBC00104832 /* HawaiiLionsAppApp.swift */,
+				00924FD32871ABBC00104832 /* HawaiiLionsApp.swift */,
 				00924FD52871ABBC00104832 /* ContentView.swift */,
 				00924FDC2871ABBD00104832 /* Persistence.swift */,
 				00924FD72871ABBD00104832 /* Assets.xcassets */,
@@ -201,7 +201,7 @@
 				00924FDD2871ABBD00104832 /* Persistence.swift in Sources */,
 				00924FD62871ABBC00104832 /* ContentView.swift in Sources */,
 				00924FE92871ABE000104832 /* Client.swift in Sources */,
-				00924FD42871ABBC00104832 /* HawaiiLionsAppApp.swift in Sources */,
+				00924FD42871ABBC00104832 /* HawaiiLionsApp.swift in Sources */,
 				003845D22BBA066600009094 /* ContactLoadCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

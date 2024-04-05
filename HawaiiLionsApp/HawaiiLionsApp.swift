@@ -1,5 +1,5 @@
 //
-//  HawaiiLionsAppApp.swift
+//  HawaiiLionsApp.swift
 //  HawaiiLionsApp
 //
 //  Created by Kobey Arai on 7/3/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct HawaiiLionsAppApp: App {
+struct HawaiiLionsApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

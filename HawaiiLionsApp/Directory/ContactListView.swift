@@ -37,6 +37,9 @@ struct ContactListView: View {
                     Button(action: {
                         alertTF(title: "Please enter the key", message: "Email kobeyarai@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
                             UserDefaults.standard.set(text, forKey: "key")
+                            Task {
+                                await client.fetchData()
+                            }
                         } secondaryAction: {}
                     }) {
                         Image(systemName: "gearshape")

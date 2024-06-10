@@ -46,10 +46,8 @@ struct TodayView: View {
                             if (!selectedObject.isShowing) {
                                 CardView(animation: animation, itemName: item)
                                     .onTapGesture {
-                                        withAnimation(.spring(response: 0.5, dampingFraction: 0.6)) {
-                                            selectedObject.name = item
-                                            selectedObject.isShowing = true
-                                        }
+                                        selectedObject.name = item
+                                        selectedObject.isShowing = true
                                     }
                                     .padding([.bottom],15)
                             }

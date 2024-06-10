@@ -19,8 +19,8 @@ struct HomeView: View {
         ZStack {
             if !selectedObject.isShowing {
                 TodayView(animation: animation)
-                                .environmentObject(selectedObject)
-                                .zIndex(1.0)
+                    .environmentObject(selectedObject)
+                    .zIndex(1.0)
             } else if selectedObject.isShowing{
                 ZStack(alignment: .topTrailing) {
                     Image(systemName: "xmark.circle.fill")

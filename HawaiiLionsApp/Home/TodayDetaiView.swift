@@ -33,7 +33,7 @@ struct TodayDetaiView: View {
                                 .foregroundColor(.black)
                                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
                                 .edgesIgnoringSafeArea(.top)
-                                .matchedGeometryEffect(id: selectedObject.name, in: animation) // Buggy???
+                                .matchedGeometryEffect(id: selectedObject.name + "image", in: animation) // Buggy???
                             
                             VStack{
                                 HStack{
@@ -46,6 +46,7 @@ struct TodayDetaiView: View {
                                             .font(.system(size: 36, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
+                                            .matchedGeometryEffect(id: selectedObject.name + "text", in: animation) // Buggy???
                                     }.padding()
                                     Spacer()
                                 }.offset(y:selectedObject.isShowing ? 44 : 0)
@@ -57,6 +58,7 @@ struct TodayDetaiView: View {
                                             .font(.system(size: 18, weight: .bold, design: .default))
                                             .foregroundColor(.init(red: 0.9, green: 0.9, blue: 0.9)).opacity(0.8)
                                             .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
+                                            .matchedGeometryEffect(id: selectedObject.name + "description", in: animation)
                                     }.padding()
                                     Spacer()
                                 }

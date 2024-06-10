@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TodayView: View {
-    @EnvironmentObject var selectedObject: SelectedObject
     var animation: Namespace.ID
     static let itemArray = ["Breakfast", "ChxSalad", "ClamChow","PBJ Sand","WadaChicken"]
     var body: some View {
@@ -43,14 +42,8 @@ struct TodayView: View {
                     .padding(.trailing)
                     LazyVGrid(columns: [GridItem()], content: {
                         ForEach(TodayView.itemArray, id:\.self) {item in
-                            if (!selectedObject.isShowing) {
-                                CardView(animation: animation, itemName: item)
-                                    .onTapGesture {
-                                        selectedObject.name = item
-                                        selectedObject.isShowing = true
-                                    }
-                                    .padding([.bottom],15)
-                            }
+                            CardView(animation: animation, itemName: item)
+                                .padding([.bottom],15)
                         }
                     })
 //                }

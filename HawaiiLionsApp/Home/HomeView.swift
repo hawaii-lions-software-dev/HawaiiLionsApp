@@ -35,7 +35,7 @@ struct HomeView: View {
                                 selectedObject.isShowing = false
                             }
                         }
-                    TodayDetaiView(animation: animation)
+                    TodayDetailView(animation: animation)
                         .environmentObject(selectedObject)
                         .zIndex(2.0)
                     Color(.white)

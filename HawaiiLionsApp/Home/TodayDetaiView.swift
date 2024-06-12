@@ -13,6 +13,7 @@ struct TodayDetailView: View {
     let itemHeight: CGFloat = 500
     let SVWidth = UIScreen.main.bounds.width - 40
     @State var scale: CGFloat = 1
+    @State private var dragOffset: CGFloat = 0
 
     var body: some View {
         if (selectedObject.isShowing) {
@@ -75,6 +76,18 @@ struct TodayDetailView: View {
                     .ignoresSafeArea()
                 }
                 .cornerRadius(30)
+                .background(GeometryReader {
+                    Color.clear.preference(key: ScrollOffsetPreferenceKey.self,
+                                           value: $0.frame(in: .named("scrollView")).minY)
+                })
+            }
+            .coordinateSpace(name: "scrollView")
+            .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
+                self.dragOffset = value
+                if value > 5 { // Adjust this threshold value as needed
+                    withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+                        selectedObject.isShowing = false
+                    }                }
             }
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
             .ignoresSafeArea()
@@ -84,20 +97,35 @@ struct TodayDetailView: View {
                     self.scale = 1
                 }
             }
-            .refreshable{
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
-                    selectedObject.isShowing = false
-                }
-            }
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        if value.translation.height > 5 { // Adjust this threshold value as needed
+                            withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+                                selectedObject.isShowing = false
+                            }                        }
+                    }
+            )
+//            .refreshable {
+//                withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+//                    selectedObject.isShowing = false
+//                }
+//            }
         }
     }
 }
 
+struct ScrollOffsetPreferenceKey: PreferenceKey {
+    typealias Value = CGFloat
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
+
 class ViewModel: ObservableObject {
-    
     static var vm = ViewModel()
-    @Published var y : CGFloat = 1 // Scale View Down
-    
+    @Published var y: CGFloat = 1 // Scale View Down
 }
 
 struct Screen {

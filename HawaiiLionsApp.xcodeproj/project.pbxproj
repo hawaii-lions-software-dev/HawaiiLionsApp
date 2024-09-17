@@ -23,6 +23,10 @@
 		00924FE92871ABE000104832 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FE62871ABE000104832 /* Client.swift */; };
 		00924FEA2871ABE000104832 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 00924FE72871ABE000104832 /* data.json */; };
 		00924FEF2872666C00104832 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00924FEE2872666C00104832 /* ContactDetailView.swift */; };
+		00C6188F2C451CD4009E5C48 /* HomePageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6188E2C451CD4009E5C48 /* HomePageClient.swift */; };
+		00C618932C4529C1009E5C48 /* testing.json in Resources */ = {isa = PBXBuildFile; fileRef = 00C618922C4529C1009E5C48 /* testing.json */; };
+		00FD7BD12C3A203200572BA6 /* ConstitutionBylawsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FD7BD02C3A203200572BA6 /* ConstitutionBylawsView.swift */; };
+		00FD7BD32C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00FD7BD22C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		00924FE62871ABE000104832 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		00924FE72871ABE000104832 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		00924FEE2872666C00104832 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		00C6188E2C451CD4009E5C48 /* HomePageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageClient.swift; sourceTree = "<group>"; };
+		00C618922C4529C1009E5C48 /* testing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testing.json; sourceTree = "<group>"; };
+		00FD7BD02C3A203200572BA6 /* ConstitutionBylawsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstitutionBylawsView.swift; sourceTree = "<group>"; };
+		00FD7BD22C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "District-50-Constitution-By-Laws-04_27_2024.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 				0038462F2BBA546200009094 /* TodayDetaiView.swift */,
 				003846312BBA55BA00009094 /* CardView.swift */,
 				0039BA322C1936E900B672D7 /* HomeView.swift */,
+				00C6188E2C451CD4009E5C48 /* HomePageClient.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -99,11 +108,14 @@
 		00924FD22871ABBC00104832 /* HawaiiLionsApp */ = {
 			isa = PBXGroup;
 			children = (
-				0038462A2BBA50B200009094 /* Home */,
+				00FD7BD22C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf */,
+				00FD7BD02C3A203200572BA6 /* ConstitutionBylawsView.swift */,
 				003845BD2BB9FD0600009094 /* Directory */,
+				0038462A2BBA50B200009094 /* Home */,
 				00924FD32871ABBC00104832 /* HawaiiLionsApp.swift */,
 				00924FD52871ABBC00104832 /* ContentView.swift */,
 				00924FDC2871ABBD00104832 /* Persistence.swift */,
+				00C618922C4529C1009E5C48 /* testing.json */,
 				00924FD72871ABBD00104832 /* Assets.xcassets */,
 				00924FDE2871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld */,
 				00924FD92871ABBD00104832 /* Preview Content */,
@@ -179,7 +191,9 @@
 			files = (
 				00924FDB2871ABBD00104832 /* Preview Assets.xcassets in Resources */,
 				00924FEA2871ABE000104832 /* data.json in Resources */,
+				00C618932C4529C1009E5C48 /* testing.json in Resources */,
 				00924FD82871ABBD00104832 /* Assets.xcassets in Resources */,
+				00FD7BD32C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,9 +207,11 @@
 				003846302BBA546200009094 /* TodayDetaiView.swift in Sources */,
 				00924FE02871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld in Sources */,
 				003845BC2BB9F98C00009094 /* ContactListView.swift in Sources */,
+				00C6188F2C451CD4009E5C48 /* HomePageClient.swift in Sources */,
 				003846322BBA55BA00009094 /* CardView.swift in Sources */,
 				0039BA332C1936E900B672D7 /* HomeView.swift in Sources */,
 				00924FEF2872666C00104832 /* ContactDetailView.swift in Sources */,
+				00FD7BD12C3A203200572BA6 /* ConstitutionBylawsView.swift in Sources */,
 				003845D42BBA06E900009094 /* ContactCell.swift in Sources */,
 				0038462E2BBA515200009094 /* TodayView.swift in Sources */,
 				00924FDD2871ABBD00104832 /* Persistence.swift in Sources */,

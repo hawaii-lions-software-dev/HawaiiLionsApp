@@ -1,10 +1,3 @@
-//
-//  TodayDetailView.swift
-//  HawaiiLionsApp
-//
-//  Created by Kobey Arai on 4/3/24.
-//
-
 import SwiftUI
 
 struct TodayDetailView: View {
@@ -21,7 +14,7 @@ struct TodayDetailView: View {
                 ZStack(alignment: .center) {
                     VStack(spacing: 0) {
                         ZStack {
-                            Image(selectedObject.name)
+                            Image("LionsLogo")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: selectedObject.isShowing ? UIScreen.main.bounds.width : self.SVWidth, height: self.itemHeight)
@@ -31,45 +24,43 @@ struct TodayDetailView: View {
                                 .foregroundColor(.black)
                                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
                                 .edgesIgnoringSafeArea(.top)
-                                .matchedGeometryEffect(id: selectedObject.name + "image", in: animation)
+                                .matchedGeometryEffect(id: selectedObject.title + "image", in: animation)
                             VStack {
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        Text("Subtitle")
+                                        Text(selectedObject.subtitle)
                                             .font(.system(size: 18, weight: .bold, design: .default))
                                             .foregroundColor(.init(red: 0.8, green: 0.8, blue: 0.8)).opacity(1.0)
                                             .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
-                                        Text("\(selectedObject.name)")
+                                        Text("\(selectedObject.title)")
                                             .font(.system(size: 36, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
-                                            .matchedGeometryEffect(id: selectedObject.name + "text", in: animation)
+                                            .matchedGeometryEffect(id: selectedObject.title + "text", in: animation)
                                     }.padding()
                                     Spacer()
                                 }.offset(y: selectedObject.isShowing ? 44 : 0)
                                 Spacer()
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        Text("Description")
+                                        Text(selectedObject.description)
                                             .lineLimit(2)
                                             .font(.system(size: 18, weight: .bold, design: .default))
                                             .foregroundColor(.init(red: 0.9, green: 0.9, blue: 0.9)).opacity(0.8)
                                             .shadow(color: Color.black.opacity(0.5), radius: 10, x: 0.0, y: 2.0)
-                                            .matchedGeometryEffect(id: selectedObject.name + "description", in: animation)
+                                            .matchedGeometryEffect(id: selectedObject.title + "description", in: animation)
                                     }.padding()
                                     Spacer()
                                 }
                             }.padding()
                         }.frame(height: self.itemHeight).zIndex(1)
                         VStack(alignment: .leading) {
-                            Text("Ingredients: ")
-                                .bold()
-                                .font(.title)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida ante vel est auctor pellentesque. Maecenas eleifend sodales tellus, nec cursus urna laoreet sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque lorem luctus dui scelerisque, vel gravida purus pharetra. Cras sem tortor, laoreet eget ante a, rutrum tempor lacus. Sed turpis turpis, tincidunt a dolor vulputate, feugiat aliquam mauris. Ut et ornare dolor. Suspendisse neque nunc, volutpat at est id, sodales elementum quam. Nulla rhoncus, dolor non accumsan consequat, felis mauris lacinia dolor, quis faucibus augue risus eget est.")
-                            Text("Instructions: ")
-                                .bold()
-                                .font(.title)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida ante vel est auctor pellentesque. Maecenas eleifend sodales tellus, nec cursus urna laoreet sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque lorem luctus dui scelerisque, vel gravida purus pharetra. Cras sem tortor, laoreet eget ante a, rutrum tempor lacus. Sed turpis turpis, tincidunt a dolor vulputate, feugiat aliquam mauris. Ut et ornare dolor. Suspendisse neque nunc, volutpat at est id, sodales elementum quam. Nulla rhoncus, dolor non accumsan consequat, felis mauris lacinia dolor, quis faucibus augue risus eget est.")
+                            ForEach(selectedObject.textContent, id: \.self) { textItem in
+                                Text(textItem.heading)
+                                    .bold()
+                                    .font(.title)
+                                Text(textItem.text)
+                            }
                         }.padding().background(Color(UIColor.systemBackground)).frame(
                             maxHeight: selectedObject.isShowing ? .infinity : 0)
                     }
@@ -103,7 +94,8 @@ struct TodayDetailView: View {
                         if value.translation.height > 5 { // Adjust this threshold value as needed
                             withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
                                 selectedObject.isShowing = false
-                            }                        }
+                            }
+                        }
                     }
             )
 //            .refreshable {

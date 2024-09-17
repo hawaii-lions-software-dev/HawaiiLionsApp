@@ -11,10 +11,13 @@ struct ContentView: View {
     @StateObject var client = Client()
     var body: some View {
         TabView {
-            //            HomeView(recipie: recipieData[0])
             HomeView()
                 .tabItem {
                     Label("Menu", systemImage: "house")
+                }
+            ConstitutionBylawsView()
+                .tabItem{
+                    Label("Const/Bylaws", systemImage: "newspaper")
                 }
             ContactListView()
                 .tabItem{

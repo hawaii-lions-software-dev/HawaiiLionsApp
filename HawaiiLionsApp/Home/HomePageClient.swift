@@ -8,28 +8,21 @@
 import Foundation
 import SwiftUI
 
-enum LoadingStatus {
-    case loading
-    case success
-    case error
-}
-
-class Client: ObservableObject {
+class HomePageClient: ObservableObject {
     @Published var loadingStatus = LoadingStatus.loading
     
     init() {
-        let fileName = UserDefaults.standard.string(forKey: "key") ?? "notFound"
         Task.init(operation: {
-            await fetchData(url: "https://www.hawaiilions.org/"+fileName.lowercased()+".json")
+            await fetchData(url: "https://hawaiilions.org/testing.json")
         })
     }
     
-    @Published var contacts: [Contact]?
-    private var response: Response? {
+    @Published var items: [FeaturedItem]?
+    private var response: HomeResponse? {
         didSet {
             if response!.status == 200 {
                 print(response!.message)
-                contacts = response!.body!
+                items = response!.body!
                 loadingStatus = .success
             } else {
                 print(response!.message)
@@ -52,12 +45,12 @@ class Client: ObservableObject {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let response = try decoder.decode(Response.self, from: data)
+            let response = try decoder.decode(HomeResponse.self, from: data)
             DispatchQueue.main.async {
                 self.response = response
             }
         } catch {
-            print("There was an error fetching or decoding the data")
+            print("There was an error fetching or decoding the home page content")
             DispatchQueue.main.async {
                 self.loadingStatus = .error
             }
@@ -66,28 +59,20 @@ class Client: ObservableObject {
     }
 }
 
-struct Contact: Codable {
-    var first: String
-    var last: String
-    var email: String
-    var phone: String
-    var title: String
-    var image: String?
-    var club: String
+struct TextContent: Codable, Hashable {
+    let heading: String
+    let text: String
 }
 
-struct Response: Codable {
+struct FeaturedItem: Hashable, Codable {
+    let title: String
+    let subtitle: String
+    let description: String
+    let textContent: [TextContent]
+}
+
+struct HomeResponse: Codable {
     let status: Int
     let message: String
-    let body: [Contact]?
-}
-
-extension Color {
-    static func random() -> Color {
-        return Color(
-            red:   .random(in: 0..<1),
-           green: .random(in: 0..<1),
-           blue:  .random(in: 0..<1)
-        )
-    }
+    let body: [FeaturedItem]?
 }

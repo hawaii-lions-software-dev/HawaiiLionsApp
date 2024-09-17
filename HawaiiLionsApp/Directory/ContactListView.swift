@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContactListView: View {
-    @StateObject var client = Client()
+    @StateObject var fetchContactService = Client()
     @AppStorage("key") var key = ""
-    
     @State private var search = ""
 
     var body: some View {
         NavigationView {
             List {
-                switch client.loadingStatus {
+                switch fetchContactService.loadingStatus {
                 case .loading:
                     ForEach(0..<25) { item in
                         ContactLoadCell()
@@ -28,17 +27,18 @@ struct ContactListView: View {
                         }
                     }
                 case .error:
-                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact kobeyarai@hawaiilions.org")
+                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact informationtechnology@hawaiilions.org")
                 }
             }
             .navigationTitle("D50 Directory")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        alertTF(title: "Please enter the key", message: "Email kobeyarai@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
+                        alertTF(title: "Please enter the key", message: "Email informationtechnology@hawaiilions.org for a key", hintText: "Key", primaryTitle: "Ok", secondaryTitle: "Cancel") { text in
                             UserDefaults.standard.set(text, forKey: "key")
                             Task {
-                                await client.fetchData()
+                                let fileName = UserDefaults.standard.string(forKey: "key") ?? "notFound"
+                                await fetchContactService.fetchData(url: "https://www.hawaiilions.org/"+fileName.lowercased()+".json")
                             }
                         } secondaryAction: {}
                     }) {
@@ -48,20 +48,21 @@ struct ContactListView: View {
                 }
             }
             .refreshable {
-                await client.fetchData()
+                let fileName = UserDefaults.standard.string(forKey: "key") ?? "notFound"
+                await fetchContactService.fetchData(url: "https://www.hawaiilions.org/"+fileName.lowercased()+".json")
             }
             .searchable(text: $search)
         }
-        .environmentObject(client)
+        .environmentObject(fetchContactService)
     }
     
     var searchResults: [Contact] {
-        if client.contacts == nil {
+        if fetchContactService.contacts == nil {
             return []
         } else if search.isEmpty {
-            return client.contacts!
+            return fetchContactService.contacts!
         } else {
-            return client.contacts!.filter {
+            return fetchContactService.contacts!.filter {
                 $0.email.lowercased().contains(search.lowercased()) ||
                 $0.phone.lowercased().contains(search.lowercased()) ||
                 $0.first.lowercased().contains(search.lowercased()) ||

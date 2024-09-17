@@ -1,0 +1,60 @@
+{"status": 200,
+"message": "Successfully fetched home data",
+"body": 
+[
+    {
+        "title": "Lions Information",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    },
+    {
+        "title": "Clubs, Regions, and Zones",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    },
+    {
+        "title": "Hawaii Lions Foundation",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    },
+    {
+        "title": "Past District Governors",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    },
+    {
+        "title": "Leo Club",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    },
+    {
+        "title": "Ads",
+        "subtitle": "test",
+        "description": "test",
+        "textContent": [{
+            "heading": "test",
+            "text": "test"
+        }]
+    }
+]
+}

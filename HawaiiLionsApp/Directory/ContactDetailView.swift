@@ -24,7 +24,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            if contact.image != nil {
+            if contact.image != nil && contact.image != "" {
                 AsyncImage(url: URL(string: contact.image!)) { image in
                     image.resizable()
                 } placeholder: {

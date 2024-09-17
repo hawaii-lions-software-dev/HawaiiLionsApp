@@ -96,7 +96,7 @@ struct HomeView: View {
                         proxy.scrollTo(selectedObject.title, anchor: .center)
                     }
                     .refreshable {
-                        await fetchHomeDataService.fetchData(url: "https://hawaiilions.org/testing2.json")
+                        await fetchHomeDataService.fetchData(url: "https://hawaiilions.org/homepage.json")
                     }
                 }
                 .zIndex(1.0)

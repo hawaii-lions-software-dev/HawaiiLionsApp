@@ -31,6 +31,10 @@ class Client: ObservableObject {
                 print(response!.message)
                 contacts = response!.body!
                 loadingStatus = .success
+            } else if (response!.status == 201) {
+                print(response!.message)
+                contacts = response!.body!
+                loadingStatus = .error
             } else {
                 print(response!.message)
                 loadingStatus = .error
@@ -46,6 +50,7 @@ class Client: ObservableObject {
         guard let url = URL(string: url) else {  /* Used to fetch data from website */
             DispatchQueue.main.async {
                 self.loadingStatus = .error
+                self.fetchLocalData()
             }
             return
         }
@@ -56,12 +61,31 @@ class Client: ObservableObject {
             DispatchQueue.main.async {
                 self.response = response
             }
+            let encoder = JSONEncoder()
+            let saveToStorage = try encoder.encode(response)
+            UserDefaults.standard.set(saveToStorage, forKey: "contacts")
         } catch {
             print("There was an error fetching or decoding the data")
             DispatchQueue.main.async {
                 self.loadingStatus = .error
+                self.fetchLocalData()
             }
             return
+        }
+    }
+    
+    func fetchLocalData() {
+        if let data = UserDefaults.standard.data(forKey: "contacts") {
+            do {
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(Response.self, from: data)
+                DispatchQueue.main.async {
+                    self.response = response
+                    self.response?.status = 201
+                }
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
         }
     }
 }
@@ -77,7 +101,7 @@ struct Contact: Codable {
 }
 
 struct Response: Codable {
-    let status: Int
+    var status: Int
     let message: String
     let body: [Contact]?
 }

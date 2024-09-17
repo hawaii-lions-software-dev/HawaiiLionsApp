@@ -13,7 +13,7 @@ class HomePageClient: ObservableObject {
     
     init() {
         Task.init(operation: {
-            await fetchData(url: "https://hawaiilions.org/testing.json")
+            await fetchData(url: "https://hawaiilions.org/testing2.json")
         })
     }
     

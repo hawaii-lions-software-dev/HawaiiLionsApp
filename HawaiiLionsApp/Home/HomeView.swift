@@ -12,18 +12,76 @@ class SelectedObject: ObservableObject {
     @Published var title = ""
     @Published var subtitle = ""
     @Published var description = ""
-    @Published var textContent = [TextContent(heading: "Lionism", text: "The International Association of Lions Clubs started as a dream in the mind of a young Chicago insurance agent. The man was Melvin Jones; the dream was the consolidation of several independent clubs, already in existence, into one strong, influential unit for service to humanity. This dream was presented to the leaders of various independent groups at a meeting in Chicago, Illinois, on June 7, 1917. From that meeting came a call for the Associationâ€™s annual convention, which was held October 8-10, 1917 in Dallas, Texas, with 23 clubs partic- ipating. Thus was conceived and founded the worldâ€™s largest, most active and most representative service club organization The Association did not become international in fact until 1920 when the first Lions clubs were organized in Canada. The third, fourth and fifth Lions countries were China, Mexico and Cuba in 1926 and 1927. Eight years later Central America entered the fold, and in 1936 the first South American club was established in Colombia. The first Lions club in Europe was organized in Stockholm, Sweden on March 24, 1948. Although the largest by far, the Lions are the youngest of the major service club organizations. Today our Association is in practically all countries of the world. On every continent it is working through hundreds of thousands of Lions of all nationalities and creeds. The Lions believe in club meetings where good fellowship and harmony prevail; in developing projects and activities geared to the needs of their communities; in broad participa- tion in an international program of brotherhood and fellowship, based upon service wherever the need exists; in service to humanity without thought to race, creed, nationality, religion or politics; in the ultimate leadership of Lionism, but not at the expense of or in conflict with the programs of other organiza- tions which, with different methods, seek the same goal of unselfish service to mankind.")]
+    @Published var textContent = [TextContent(heading: "", text: "")]
 }
 
 struct HomeView: View {
     @Namespace var animation
     @StateObject var selectedObject = SelectedObject()
+    @State private var scrollOffset: CGFloat = 0
+    @StateObject var fetchHomeDataService = HomePageClient()
     var body: some View {
         ZStack {
             if !selectedObject.isShowing {
-                TodayView(animation: animation)
-                    .environmentObject(selectedObject)
-                    .zIndex(1.0)
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        VStack {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(Date().formatted(date: .complete, time: .omitted).uppercased())
+                                        .font(.system(size: 18, weight: .bold, design: .default))
+                                        .foregroundColor(.gray)
+                                    Text("Aloha").font(.system(size: 40, weight: .bold, design: .default))
+                                }
+                                Spacer()
+                            }
+                            .padding([.leading, .top, .trailing])
+
+                            switch fetchHomeDataService.loadingStatus {
+                                case .loading:
+                                    ForEach(0..<25) { item in
+                                        ContactLoadCell()
+                                    }
+                                case .success:
+                                    LazyVGrid(columns: [GridItem()], content: {
+                                        ForEach(fetchHomeDataService.items!, id: \.self) { item in
+                                            CardView(animation: animation, itemName: item.title, itemSubtitle: item.subtitle, itemDescription: item.description)
+                                            .padding([.bottom], 15)
+                                            .id(item.title)
+                                            .onTapGesture {
+                                                withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+                                                    selectedObject.title = item.title
+                                                    selectedObject.subtitle = item.subtitle
+                                                    selectedObject.description = item.description
+                                                    selectedObject.textContent = item.textContent
+                                                    selectedObject.isShowing = true
+                                                }
+                                            }
+                                        }
+                                    })
+                                case .error:
+                                    Text("Error, please try again later. If this issue persists, please contact informationtechnology@hawaiilions.org")
+                            }
+                            
+                            
+                        }
+                        .background(GeometryReader {
+                            Color.clear.preference(key: ScrollOffsetPreferenceKey.self,
+                                                   value: $0.frame(in: .named("scrollView")).minY)
+                        })
+                    }
+                    .coordinateSpace(name: "scrollView")
+                    .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
+                        self.scrollOffset = value
+                    }
+                    .onAppear {
+                        proxy.scrollTo(selectedObject.title, anchor: .center)
+                    }
+                    .refreshable {
+                        await fetchHomeDataService.fetchData(url: "https://hawaiilions.org/testing2.json")
+                    }
+                }
+                .zIndex(1.0)
             } else if selectedObject.isShowing{
                 ZStack(alignment: .topTrailing) {
                     Image(systemName: "xmark.circle.fill")
@@ -38,7 +96,7 @@ struct HomeView: View {
                                 selectedObject.isShowing = false
                             }
                         }
-                    TodayDetailView(animation: animation)
+                    HomeDetailView(animation: animation)
                         .environmentObject(selectedObject)
                         .zIndex(2.0)
                     Color(.white)

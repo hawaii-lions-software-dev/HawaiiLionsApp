@@ -65,12 +65,12 @@
 		003845BD2BB9FD0600009094 /* Directory */ = {
 			isa = PBXGroup;
 			children = (
-				00924FE62871ABE000104832 /* Client.swift */,
-				00924FEE2872666C00104832 /* ContactDetailView.swift */,
 				003845BB2BB9F98C00009094 /* ContactListView.swift */,
-				00924FE72871ABE000104832 /* data.json */,
-				003845D12BBA066600009094 /* ContactLoadCell.swift */,
+				00924FEE2872666C00104832 /* ContactDetailView.swift */,
 				003845D32BBA06E900009094 /* ContactCell.swift */,
+				003845D12BBA066600009094 /* ContactLoadCell.swift */,
+				00924FE62871ABE000104832 /* Client.swift */,
+				00924FE72871ABE000104832 /* data.json */,
 			);
 			path = Directory;
 			sourceTree = "<group>";

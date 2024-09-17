@@ -82,8 +82,18 @@
 				0038462F2BBA546200009094 /* HomeDetaiView.swift */,
 				003846312BBA55BA00009094 /* Card.swift */,
 				00C6188E2C451CD4009E5C48 /* HomePageClient.swift */,
+				00C618922C4529C1009E5C48 /* home.json */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		003D62F42C9A1CB8005E0157 /* ConstBylaws */ = {
+			isa = PBXGroup;
+			children = (
+				00FD7BD02C3A203200572BA6 /* ConstitutionBylawsView.swift */,
+				00FD7BD22C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf */,
+			);
+			path = ConstBylaws;
 			sourceTree = "<group>";
 		};
 		00924FC72871ABBC00104832 = {
@@ -105,14 +115,12 @@
 		00924FD22871ABBC00104832 /* HawaiiLionsApp */ = {
 			isa = PBXGroup;
 			children = (
-				00FD7BD22C3A35CF00572BA6 /* District-50-Constitution-By-Laws-04_27_2024.pdf */,
-				00FD7BD02C3A203200572BA6 /* ConstitutionBylawsView.swift */,
-				003845BD2BB9FD0600009094 /* Directory */,
 				0038462A2BBA50B200009094 /* Home */,
+				003D62F42C9A1CB8005E0157 /* ConstBylaws */,
+				003845BD2BB9FD0600009094 /* Directory */,
 				00924FD32871ABBC00104832 /* HawaiiLionsApp.swift */,
 				00924FD52871ABBC00104832 /* ContentView.swift */,
 				00924FDC2871ABBD00104832 /* Persistence.swift */,
-				00C618922C4529C1009E5C48 /* home.json */,
 				00924FD72871ABBD00104832 /* Assets.xcassets */,
 				00924FDE2871ABBD00104832 /* HawaiiLionsApp.xcdatamodeld */,
 				00924FD92871ABBD00104832 /* Preview Content */,

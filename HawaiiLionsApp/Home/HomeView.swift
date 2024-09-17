@@ -61,6 +61,24 @@ struct HomeView: View {
                                     })
                                 case .error:
                                     Text("Error, please try again later. If this issue persists, please contact informationtechnology@hawaiilions.org")
+                            case .updateError:
+                                LazyVGrid(columns: [GridItem()], content: {
+                                    Text("Error, Could not get latest updates from the server. We will display outdated information. This may mean you are not connected to the internet. If this issue persists, please contact informationtechnology@hawaiilions.org")
+                                    ForEach(fetchHomeDataService.items!, id: \.self) { item in
+                                        CardView(animation: animation, itemName: item.title, itemSubtitle: item.subtitle, itemDescription: item.description)
+                                        .padding([.bottom], 15)
+                                        .id(item.title)
+                                        .onTapGesture {
+                                            withAnimation(.spring(response: 0.6, dampingFraction: 0.9)) {
+                                                selectedObject.title = item.title
+                                                selectedObject.subtitle = item.subtitle
+                                                selectedObject.description = item.description
+                                                selectedObject.textContent = item.textContent
+                                                selectedObject.isShowing = true
+                                            }
+                                        }
+                                    }
+                                })
                             }
                             
                             

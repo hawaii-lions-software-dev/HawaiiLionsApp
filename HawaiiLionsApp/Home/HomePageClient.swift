@@ -24,6 +24,10 @@ class HomePageClient: ObservableObject {
                 print(response!.message)
                 items = response!.body!
                 loadingStatus = .success
+            } else if (response!.status == 201) {
+                print(response!.message)
+                items = response!.body!
+                loadingStatus = .updateError
             } else {
                 print(response!.message)
                 loadingStatus = .error
@@ -39,6 +43,7 @@ class HomePageClient: ObservableObject {
         guard let url = URL(string: url) else {  /* Used to fetch data from website */
             DispatchQueue.main.async {
                 self.loadingStatus = .error
+                self.fetchLocalData()
             }
             return
         }
@@ -49,12 +54,31 @@ class HomePageClient: ObservableObject {
             DispatchQueue.main.async {
                 self.response = response
             }
+            let encoder = JSONEncoder()
+            let saveToStorage = try encoder.encode(response)
+            UserDefaults.standard.set(saveToStorage, forKey: "home")
         } catch {
             print("There was an error fetching or decoding the home page content")
             DispatchQueue.main.async {
                 self.loadingStatus = .error
+                self.fetchLocalData()
             }
             return
+        }
+    }
+    
+    func fetchLocalData() {
+        if let data = UserDefaults.standard.data(forKey: "home") {
+            do {
+                let decoder = JSONDecoder()
+                let response = try decoder.decode(HomeResponse.self, from: data)
+                DispatchQueue.main.async {
+                    self.response = response
+                    self.response?.status = 201
+                }
+            } catch {
+                print("Unable to Decode Note (\(error))")
+            }
         }
     }
 }
@@ -72,7 +96,7 @@ struct FeaturedItem: Hashable, Codable {
 }
 
 struct HomeResponse: Codable {
-    let status: Int
+    var status: Int
     let message: String
     let body: [FeaturedItem]?
 }

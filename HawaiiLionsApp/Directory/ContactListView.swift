@@ -26,14 +26,16 @@ struct ContactListView: View {
                             ContactCell(contact: contact)
                         }
                     }
-                case .error:
-                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If we can find outdated information, we will show it below. If this issue persists, please contact informationtechnology@hawaiilions.org")
+                case .updateError:
+                    Text("Error, Could not get latest updates from the server. We will display outdated information. This may mean you are not connected to the internet. If this issue persists, please contact informationtechnology@hawaiilions.org")
                     ForEach(searchResults, id: \.email) { contact in
                         NavigationLink(destination: DetailView(contact: contact)) {
                             ContactCell(contact: contact)
                         }
                     }
                     
+                case .error:
+                    Text("Error, Most times this means the key is invalid. Please tap on the gear on the top right to input a new key. If this issue persists, please contact informationtechnology@hawaiilions.org")
                 }
             }
             .navigationTitle("D50 Directory")

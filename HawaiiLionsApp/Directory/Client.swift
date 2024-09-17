@@ -12,6 +12,7 @@ enum LoadingStatus {
     case loading
     case success
     case error
+    case updateError
 }
 
 class Client: ObservableObject {
@@ -34,7 +35,7 @@ class Client: ObservableObject {
             } else if (response!.status == 201) {
                 print(response!.message)
                 contacts = response!.body!
-                loadingStatus = .error
+                loadingStatus = .updateError
             } else {
                 print(response!.message)
                 loadingStatus = .error
